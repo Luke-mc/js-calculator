@@ -17,7 +17,7 @@ function calculatorModule(){
 
 
 
-var calculator = {
+var calculator = {};
 
 
 
@@ -27,23 +27,36 @@ var calculator = {
    * @return { Number }    current total
    */
 
-   load : function(x){
+ calculator.load = function(x){
 
-    total = n;
+  return total = x;
 
-   }
+};
+
 
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
+calculator.getTotal = function(){
+
+  return total;
+
+};
+
 
 
   /**
    * Sums the value passed in with `total`
    * @param { Number } x
    */
+
+   calculator.add = function(x){
+
+  return total += x;
+
+};
 
 
   /**
@@ -82,6 +95,8 @@ var calculator = {
   /**
    * Validation
    */
-}
+
+
 return calculator;
+
 }
