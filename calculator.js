@@ -108,10 +108,24 @@ calculator.multiply = function(x){
    * Stores the value of `total` to `memory`
    */
 
+   calculator.saveMemory = function(x){
+
+   return memory = total;
+
+};
+
 
   /**
    * Clear the value stored at `memory`
    */
+
+
+   calculator.clearMemory = function(x){
+
+   return memory = 0;
+
+};
+
 
   /**
    * Validation
