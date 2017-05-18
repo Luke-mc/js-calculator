@@ -6,6 +6,7 @@
  * @return {object} `calculator` object that can be used
  */
 
+
 function calculatorModule(){
 
   var memory = 0;
@@ -13,11 +14,8 @@ function calculatorModule(){
 
   var total = 0;
 
-
-
-
-
 var calculator = {};
+
 
 
 
@@ -27,9 +25,28 @@ var calculator = {};
    * @return { Number }    current total
    */
 
+function isValid(num){
+
+ if(typeof num === "number"){
+
+      return true;
+
+    }
+
+ else{
+
+throw new Error;
+
+    }
+   };
+
+
  calculator.load = function(x){
 
-  return total = x;
+isValid(x);
+
+return total = x;
+
 
 };
 
@@ -54,6 +71,8 @@ calculator.getTotal = function(){
 
    calculator.add = function(x){
 
+isValid(x);
+
   return total += x;
 
 };
@@ -64,6 +83,8 @@ calculator.getTotal = function(){
    * @param  { Number } x
    */
 calculator.subtract = function(x){
+
+isValid(x);
 
   return total -= x;
 
@@ -76,6 +97,8 @@ calculator.subtract = function(x){
 
 calculator.multiply = function(x){
 
+isValid(x);
+
   return total *= x;
 
 };
@@ -86,6 +109,8 @@ calculator.multiply = function(x){
    */
 
    calculator.divide = function(x){
+
+isValid(x);
 
   return total /= x;
 
@@ -130,6 +155,9 @@ calculator.multiply = function(x){
   /**
    * Validation
    */
+
+
+
 
 
 return calculator;
