@@ -63,13 +63,22 @@ calculator.getTotal = function(){
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
+calculator.subtract = function(x){
 
+  return total -= x;
+
+};
 
   /**
    * Multiplies the value by `total`
    * @param  { Number } x
    */
 
+calculator.multiply = function(x){
+
+  return total *= x;
+
+};
 
   /**
    * Divides the value passing in by `total`
