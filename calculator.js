@@ -85,11 +85,23 @@ calculator.multiply = function(x){
    * @param  { Number } x
    */
 
+   calculator.divide = function(x){
+
+  return total /= x;
+
+};
+
 
   /**
    * Return the value stored at `memory`
    * @return { Number }
    */
+
+   calculator.recallMemory = function(x){
+
+  return memory;
+
+};
 
 
   /**
