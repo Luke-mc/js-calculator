@@ -25,20 +25,7 @@ var calculator = {};
    * @return { Number }    current total
    */
 
-function isValid(num){
 
- if(typeof num === "number"){
-
-      return true;
-
-    }
-
- else{
-
-throw new Error;
-
-    }
-   };
 
 
  calculator.load = function(x){
@@ -155,6 +142,21 @@ isValid(x);
   /**
    * Validation
    */
+
+   function isValid(num){
+
+ if(typeof num === "number"){
+
+      return true;
+
+    }
+
+ else{
+
+throw new Error;
+
+    }
+   };
 
 
 
