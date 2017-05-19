@@ -28,7 +28,7 @@ var calculator = {};
 
 
 
- calculator.load = function(x){
+function load(x){
 
 isValid(x);
 
@@ -43,7 +43,7 @@ return total = x;
    * Return the value of `total`
    * @return { Number }
    */
-calculator.getTotal = function(){
+function getTotal(){
 
   return total;
 
@@ -56,7 +56,7 @@ calculator.getTotal = function(){
    * @param { Number } x
    */
 
-   calculator.add = function(x){
+function add(x){
 
 isValid(x);
 
@@ -69,7 +69,7 @@ isValid(x);
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
-calculator.subtract = function(x){
+function subtract(x){
 
 isValid(x);
 
@@ -82,7 +82,7 @@ isValid(x);
    * @param  { Number } x
    */
 
-calculator.multiply = function(x){
+function multiply(x){
 
 isValid(x);
 
@@ -95,7 +95,7 @@ isValid(x);
    * @param  { Number } x
    */
 
-   calculator.divide = function(x){
+function divide(x){
 
 isValid(x);
 
@@ -109,7 +109,7 @@ isValid(x);
    * @return { Number }
    */
 
-   calculator.recallMemory = function(x){
+function recallMemory(x){
 
   return memory;
 
@@ -120,7 +120,7 @@ isValid(x);
    * Stores the value of `total` to `memory`
    */
 
-   calculator.saveMemory = function(x){
+function saveMemory(x){
 
    return memory = total;
 
@@ -131,8 +131,7 @@ isValid(x);
    * Clear the value stored at `memory`
    */
 
-
-   calculator.clearMemory = function(x){
+function clearMemory(x){
 
    return memory = 0;
 
@@ -143,7 +142,7 @@ isValid(x);
    * Validation
    */
 
-   function isValid(num){
+function isValid(num){
 
  if(typeof num === "number"){
 
@@ -162,6 +161,19 @@ throw new Error;
 
 
 
-return calculator;
+return {
+
+  load:load,
+  getTotal:getTotal,
+  add:add,
+  subtract:subtract,
+  multiply:multiply,
+  divide:divide,
+  recallMemory:recallMemory,
+  saveMemory:saveMemory,
+  clearMemory:clearMemory,
+
+
+};
 
 }
